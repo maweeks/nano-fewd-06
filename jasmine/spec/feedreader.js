@@ -9,11 +9,13 @@
  * to ensure they don't run until the DOM is ready.
  */
 $(function() {
+
     /* This is our first test suite - a test suite just contains
-    * a related set of tests. This suite is all about the RSS
-    * feeds definitions, the allFeeds variable in our application.
-    */
+     * a related set of tests. This suite is all about the RSS
+     * feeds definitions, the allFeeds variable in our application.
+     */
     describe('RSS Feeds', function() {
+
         /* This is our first test - it tests to make sure that the
          * allFeeds variable has been defined and that it is not
          * empty. Experiment with this before you get started on
@@ -61,11 +63,11 @@ $(function() {
             expect(document.body.className).toContain("menu-hidden");
         });
 
-         /* Write a test that ensures the menu changes
-          * visibility when the menu icon is clicked. This test
-          * should have two expectations: does the menu display when
-          * clicked and does it hide when clicked again.
-          */
+        /* Write a test that ensures the menu changes
+         * visibility when the menu icon is clicked. This test
+         * should have two expectations: does the menu display when
+         * clicked and does it hide when clicked again.
+         */
         it('shows and hides correctly', function() {
             document.getElementsByClassName("menu-icon-link")[0].click();
             expect(document.body.className).not.toContain("menu-hidden");
@@ -106,7 +108,6 @@ $(function() {
             loadFeed(0, function() {
                 // Store the contents of the feed after the first feed has loaded.
                 firstFeed = document.getElementsByClassName('feed')[0].innerHTML;
-
                 loadFeed(1, function() {
                     // Store the contents of the feed after the second feed has loaded.
                     secondFeed = document.getElementsByClassName('feed')[0].innerHTML;
